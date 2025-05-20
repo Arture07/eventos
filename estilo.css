@@ -1,4 +1,8 @@
-/* Reset Básico */
+:root{
+    --Cor-principal: #c0eefb; /* cor do fundo da logo*/
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +16,9 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header e Navegação */
+
 header {
-    background: #333;
+    background: var(--Cor-principal); /* ta na mesma cor do fundo da logo, ve se vc acha que ficou bom*/
     color: #fff;
     padding: 1rem 0;
     position: sticky;
