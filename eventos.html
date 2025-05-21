@@ -1,68 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos Passados - Lagunna - Eventos</title>
-    <link rel="stylesheet" href="estilo.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Passados - Lagunna - Eventos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="script.js"></script> </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">Lagunna Eventos</a>
-            </div>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="eventos.html" class="active">Eventos Passados</a></li>
-                <li><a href="sobre.html">Avaliações</a></li>
-                <li><a href="contatos.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="./imagens/logo.png" alt="Lagunna Eventos" /></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="eventos.html" class="active">Eventos Passados</a></li>
+        <li><a href="avaliacao.html">Avaliações</a></li>
+        <li><a href="contatos.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="pagina-titulo">
-            <h1>Nossos Eventos Passados</h1>
-            <p>Relembre os momentos incríveis que já proporcionamos.</p>
-        </section>
+  <main>
+    <section class="pagina-titulo">
+      <h1>Nossos Eventos Passados</h1>
+      <p>Relembre os momentos incríveis que já proporcionamos.</p>
+    </section>
 
-        <section class="lista-eventos">
-            <article class="evento-item" id="evento1">
-                <img src="imagens/aniversario _fernanda.jpg" alt="Imagem do Evento Passado 1">
-                <div class="evento-info">
-                    <h2>Aniversario</h2>
-                    <p><strong>Data de Realização:</strong> 12/07/2024</p>
-                    <p><strong>Descrição:</strong> Aniversario, Parabéns Fernanda pelos seus 18 anos 💚</p>
-                    <a href="#" class="btn-secundario">Ver Galeria de Fotos</a>
-                </div>
-            </article>
+    <section class="lista-eventos">
+      <article class="evento-item" id="evento1">
+        <img src="imagens/aniversario _fernanda.jpg" alt="Imagem do Evento Passado 1 - Aniversário Fernanda">
+        <div class="evento-info">
+          <h2>Aniversário</h2>
+          <p><strong>Data de Realização:</strong> 12/07/2024</p>
+          <p><strong>Descrição:</strong> Parabéns Fernanda pelos seus 18 anos 💚</p>
+          <a href="javascript:void(0)" onclick="abrirGaleria('galeria1')">Ver Galeria de Fotos</a>
+        </div>
+      </article>
 
-            <article class="evento-item" id="evento2">
-                <img src="imagens/Casamento.jpg" alt="Imagem do Evento Passado 2">
-                <div class="evento-info">
-                    <h2>Casamento</h2>
-                    <p><strong>Data de Realização:</strong> 10/09/2024</p>
-                    <p><strong>Descrição:</strong> Casamento ao ar livre, Parabéns aos noivos ❤️.</p>
-                    <a href="#" class="btn-secundario">Ver Galeria de Fotos</a>
-                </div>
-            </article>
+      <article class="evento-item" id="evento2">
+        <img src="imagens/Casamento.jpg" alt="Imagem do Evento Passado 2 - Casamento ao ar livre">
+        <div class="evento-info">
+          <h2>Casamento</h2>
+          <p><strong>Data de Realização:</strong> 10/09/2024</p>
+          <p><strong>Descrição:</strong> Casamento ao ar livre, Parabéns aos noivos ❤️.</p>
+          <a href="javascript:void(0)" onclick="abrirGaleria('galeria2')">Ver Galeria de Fotos</a>
+        </div>
+      </article>
 
-            <article class="evento-item" id="evento3">
-                <img src="imagens/Cha de bebe.jpg" alt="Imagem do Evento Passado 3">
-                <div class="evento-info">
-                    <h2>Chá de bebê</h2>
-                    <p><strong>Data de Realização:</strong> 16/04/2024</p>
-                    <p><strong>Descrição:</strong> Aguardando a chegada da pequena Maria Antonella🩷.</p>
-                    <a href="#" class="btn-secundario">Ver Galeria de Fotos</a>
-                </div>
-            </article>
+      <article class="evento-item" id="evento3">
+        <img src="imagens/Cha de bebe.jpg" alt="Imagem do Evento Passado 3 - Chá de bebê Maria Antonella">
+        <div class="evento-info">
+          <h2>Chá de bebê</h2>
+          <p><strong>Data de Realização:</strong> 16/04/2024</p>
+          <p><strong>Descrição:</strong> Aguardando a chegada da pequena Maria Antonella🩷.</p>
+          <a href="javascript:void(0)" onclick="abrirGaleria('galeria3')">Ver Galeria de Fotos</a>
+        </div>
+      </article>
+    </section> <div id="galeria1" class="galeria-card">
+      <div class="galeria-conteudo">
+        <span class="fechar" onclick="fecharGaleria('galeria1')">&times;</span>
+        <h3>Galeria de Fotos - Aniversário</h3>
+        <div class="fotos">
+          <img src="./imagens/fernanda/Aniversario Fernanda_1.jpg" alt="Foto 1 Aniversário Fernanda">
+          <img src="./imagens/fernanda/Aniversario Fernanda_2.jpg" alt="Foto 2 Aniversário Fernanda">
+          <img src="./imagens/fernanda/Aniversario Fernanda_3.jpg" alt="Foto 3 Aniversário Fernanda">
+        </div>
+      </div>
+    </div>
 
-             </section>
-    </main>
+    <div id="galeria2" class="galeria-card">
+      <div class="galeria-conteudo">
+        <span class="fechar" onclick="fecharGaleria('galeria2')">&times;</span>
+        <h3>Galeria de Fotos - Casamento</h3>
+        <div class="fotos">
+          <img src="./imagens/casamento/Casamento 01.webp" alt="Foto 1 Casamento">
+          <img src="./imagens/casamento/Casamento 02.webp" alt="Foto 2 Casamento">
+          <img src="./imagens/casamento/Casamento 03.webp" alt="Foto 3 Casamento">
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Lagunna - Eventos. Todos os direitos reservados.</p>
-    </footer>
+    <div id="galeria3" class="galeria-card">
+      <div class="galeria-conteudo">
+        <span class="fechar" onclick="fecharGaleria('galeria3')">&times;</span>
+        <h3>Galeria de Fotos - Chá de Bebê</h3>
+        <div class="fotos">
+          <img src="./imagens/cha de bebe/Cha de bebe01.jpg" alt="Foto 1 Chá de Bebê">
+          <img src="./imagens/cha de bebe/Cha de bebe02.jpg" alt="Foto 2 Chá de Bebê">
+          <img src="./imagens/cha de bebe/Cha de bebe03.jpg" alt="Foto 3 Chá de Bebê">
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lagunna - Eventos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
