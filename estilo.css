@@ -1,7 +1,13 @@
 :root{
-    --Cor-principal: #c0eefb; /* cor do fundo da logo*/
+    --Cor-principal: #e6f0fa;      /* azul bem claro */
+    --Cor-secundaria: #f4faff;     /* quase branco azulado */
+    --Cor-destaque: #3b82f6;       /* azul médio para botões/destaques */
+    --Cor-texto: #1e293b;          /* azul acinzentado escuro para texto */
+    --Cor-card: #fafdff;           /* branco azulado para cards */
+    --Cor-borda: #b6d4f7;          /* azul claro para bordas */
+    --Cor-hover: #2563eb;          /* azul mais escuro para hover */
+    --Cor-footer: #1e40af;         /* azul escuro para o rodapé */
 }
-
 
 * {
     margin: 0;
@@ -12,13 +18,12 @@
 
 body {
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--Cor-texto);
+    background-color: var(--Cor-secundaria);
 }
 
-
 header {
-    background: var(--Cor-principal); /* ta na mesma cor do fundo da logo, ve se vc acha que ficou bom*/
+    background: var(--Cor-principal);
     color: #fff;
     padding: 1rem 0;
     position: sticky;
@@ -36,7 +41,7 @@ header nav {
 }
 
 header .logo a {
-    color: #fff;
+    color: var(--Cor-destaque);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
@@ -52,7 +57,7 @@ header ul li {
 }
 
 header ul li a {
-    color: #fff;
+    color: var(--Cor-destaque);
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
@@ -60,7 +65,8 @@ header ul li a {
 
 header ul li a:hover,
 header ul li a.active {
-    background-color: #555;
+    background-color: var(--Cor-hover);
+    color: #fff;
     border-radius: 5px;
 }
 
@@ -73,8 +79,8 @@ main {
 
 /* Banner (Página Inicial) */
 .banner {
-    background: #4a90e2 url('placeholder-banner.jpg') no-repeat center center/cover; /* Adicione uma imagem de banner aqui */
-    color: #fff;
+    background: var(--Cor-principal) url('placeholder-banner.jpg') no-repeat center center/cover; /* Adicione uma imagem de banner aqui */
+    color: var(--Cor-texto);
     padding: 4rem 2rem;
     text-align: center;
     border-radius: 8px;
@@ -92,8 +98,8 @@ main {
 }
 
 .btn-destaque {
-    background: #f90;
-    color: #333;
+    background: var(--Cor-destaque);
+    color: #fff;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
@@ -102,7 +108,7 @@ main {
 }
 
 .btn-destaque:hover {
-    background: #e80;
+    background: var(--Cor-hover);
 }
 
 /* Seção de Destaques (Página Inicial) */
@@ -114,7 +120,7 @@ main {
 .destaques h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--Cor-destaque);
 }
 
 .grid-eventos {
@@ -124,8 +130,8 @@ main {
 }
 
 .card-evento {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: var(--Cor-card);
+    border: 1px solid var(--Cor-borda);
     border-radius: 8px;
     padding: 20px;
     text-align: left;
@@ -143,7 +149,7 @@ main {
 .card-evento h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: #4a90e2;
+    color: var(--Cor-destaque);
 }
 
 .card-evento p {
@@ -152,18 +158,19 @@ main {
 }
 
 .card-evento a {
-    color: #4a90e2;
+    color: var(--Cor-destaque);
     text-decoration: none;
     font-weight: bold;
 }
 
 .card-evento a:hover {
+    color: var(--Cor-hover);
     text-decoration: underline;
 }
 
 /* Call to Action (Página Inicial) */
 .call-to-action {
-    background: #333;
+    background: var(--Cor-destaque);
     color: #fff;
     padding: 2rem;
     text-align: center;
@@ -181,7 +188,7 @@ main {
 /* Botão Genérico */
 .btn {
     display: inline-block;
-    background: #4a90e2;
+    background: var(--Cor-destaque);
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -192,7 +199,7 @@ main {
 }
 
 .btn:hover {
-    background: #357abd;
+    background: var(--Cor-hover);
 }
 
 /* Título da Página (para Eventos, Sobre, Contato) */
@@ -200,18 +207,18 @@ main {
     text-align: center;
     padding: 20px 0;
     margin-bottom: 30px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid var(--Cor-borda);
 }
 
 .pagina-titulo h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: var(--Cor-destaque);
 }
 
 /* Lista de Eventos (Página Eventos) */
 .lista-eventos .evento-item {
-    background: #fff;
-    border: 1px solid #ddd;
+    background: var(--Cor-card);
+    border: 1px solid var(--Cor-borda);
     border-radius: 8px;
     margin-bottom: 20px;
     padding: 20px;
@@ -231,7 +238,7 @@ main {
 .lista-eventos .evento-info h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #4a90e2;
+    color: var(--Cor-destaque);
 }
 
 .lista-eventos .evento-info p {
@@ -243,7 +250,7 @@ main {
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    background: #fff;
+    background: var(--Cor-card);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -254,7 +261,7 @@ main {
 }
 .texto-sobre h2 {
     font-size: 1.8rem;
-    color: #4a90e2;
+    color: var(--Cor-destaque);
     margin-top: 15px;
     margin-bottom: 10px;
 }
@@ -273,14 +280,14 @@ main {
     object-fit: cover;
 }
 
-
 /* Formulário de Contato (Página Contato) */
 .formulario-contato {
-    background: #fff;
+    background: var(--Cor-card);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 30px;
+    border: 1px solid var(--Cor-borda);
 }
 
 .form-grupo {
@@ -291,7 +298,7 @@ main {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
+    color: var(--Cor-texto);
 }
 
 .form-grupo input[type="text"],
@@ -299,7 +306,7 @@ main {
 .form-grupo textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--Cor-borda);
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -310,15 +317,16 @@ main {
 
 /* Informações de Contato (Página Contato) */
 .informacoes-contato {
-    background: #fff;
+    background: var(--Cor-card);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 30px;
+    border: 1px solid var(--Cor-borda);
 }
 .informacoes-contato h2 {
     font-size: 1.8rem;
-    color: #4a90e2;
+    color: var(--Cor-destaque);
     margin-bottom: 15px;
 }
 .informacoes-contato p {
@@ -327,7 +335,7 @@ main {
 
 /* Footer */
 footer {
-    background: #222;
+    background: var(--Cor-footer);
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
@@ -383,4 +391,9 @@ footer {
     .imagem-sobre img {
         margin-top: 20px;
     }
+}
+.logo img {
+    height: 60px; /* ajuste conforme necessário */
+    width: auto;
+    display: block;
 }
