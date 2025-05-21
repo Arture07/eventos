@@ -329,8 +329,9 @@ main {
     color: var(--Cor-destaque);
     margin-bottom: 15px;
 }
-.informacoes-contato p {
+.informacoes-contato a {
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 /* Footer */
